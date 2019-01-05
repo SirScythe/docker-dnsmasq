@@ -1,9 +1,6 @@
 # docker-dnsmasq
 
-dnsmasq in a docker container, configurable via a [simple web UI](https://github.com/jpillora/webproc)
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/jpillora/dnsmasq.svg)][dockerhub]
-[![Image Size](https://images.microbadger.com/badges/image/jpillora/dnsmasq.svg)][dockerhub]
+dnsmasq in a docker container, configurable via a [simple web UI](https://github.com/jpillora/webproc) for ARM based hosts like the raspberry pi
 
 ### Usage
 
@@ -26,12 +23,13 @@ dnsmasq in a docker container, configurable via a [simple web UI](https://github
    address=/myhost.company/10.0.0.2
    ```
 
-1. Run the container
+1. Run the container, requires NET_ADMIN
 
    ```
    $ docker run \
    	--name dnsmasq \
    	-d \
+      --cap-add=NET_ADMIN \
    	-p 53:53/udp \
    	-p 5380:8080 \
    	-v /opt/dnsmasq.conf:/etc/dnsmasq.conf \
