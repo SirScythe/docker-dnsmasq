@@ -56,6 +56,10 @@ dnsmasq in a docker container, configurable via a [simple web UI](https://github
    myhost.company has address 10.0.0.2
    ```
 
+
+
+this Image is a fork from https://github.com/jpillora/docker-dnsmasq
+
 #### MIT License
 
 Copyright &copy; 2018 Jaime Pillora &lt;dev@jpillora.com&gt;
