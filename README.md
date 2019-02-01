@@ -26,9 +26,8 @@ dnsmasq in a docker container, configurable via a [simple web UI](https://github
 1. Run the container, requires NET_ADMIN
 
    ```
-   $ docker run \
+   $ docker run -d \
    	--name dnsmasq \
-   	-d \
    	--cap-add=NET_ADMIN \
    	-p 53:53/udp \
    	-p 5380:8080 \
@@ -37,7 +36,7 @@ dnsmasq in a docker container, configurable via a [simple web UI](https://github
    	-e "HTTP_USER=foo" \
    	-e "HTTP_PASS=bar" \
    	--restart always \
-   	jpillora/dnsmasq
+   	sirscythe/dnsmasq-arm
    ```
 
 1. Visit `http://<docker-host>:5380`, authenticate with `foo/bar` and you should see
