@@ -2,6 +2,8 @@
 
 dnsmasq in a docker container, configurable via a [simple web UI](https://github.com/jpillora/webproc) for ARM based hosts like the raspberry pi
 
+The built image for ARM devices is available on Docker Hub at https://hub.docker.com/r/sirscythe/dnsmasq-arm
+
 ### Usage
 
 1. Create a [`/opt/dnsmasq.conf`](http://oss.segetech.com/intra/srv/dnsmasq.conf) file on the Docker host
