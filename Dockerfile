@@ -1,7 +1,7 @@
 FROM alpine:latest
 LABEL maintainer="martin@sirscythe.net"
 # webproc release settings
-ENV WEBPROC_URL https://github.com/jpillora/webproc/releases/download/v0.3.0/webproc_0.3.0_linux_armv7.gz
+ENV WEBPROC_URL https://github.com/jpillora/webproc/releases/download/v0.3.3/webproc_0.3.3_linux_armv7.gz
 # fetch dnsmasq and webproc binary
 RUN apk update \
         && apk --no-cache add dnsmasq \
